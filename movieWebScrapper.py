@@ -6,7 +6,7 @@ import os
 import re
 
 #  Set the URL of the website you want to scrape.
-url = "https://sflix.to/home"
+url = "theHomePage UTL"
 
 # Get the HTML of the website.
 response = requests.get(url)
@@ -73,6 +73,7 @@ for a_slide_element in a_slide_elements:
 
 # print(strT0list)
 
+#Getting the movie from suggestion box
 for a_element in a_elements:
     if "href" in a_element.attrs:
         href_link = a_element["href"]
@@ -88,6 +89,7 @@ for a_element in a_elements:
 # calling function
 # moviesLinks(strT0list)
 
+# to create all the url count them and show case them while numbered
 def moviesLinks(new_urls):
     number_of_strings = 0
     new_url_fix = "https://sflix.to"
@@ -110,14 +112,14 @@ def moviesLinks(new_urls):
             strT0list.append(new_href_link)
         print(fully)
         # print(strT0list_numb)
-        if strT0list_numb == 6000:
+        if strT0list_numb == 2000:
             print(strT0list)
             break
 
-
+#self calling the fuction untill a certain number of links collected is acieved
 moviesLinks(strT0list)
 
-
+# make sure no duplicates while writing the links to the txt file
 def list_to_string(list_of_characters):
     number_of_links = 0
     seen = set()
@@ -133,7 +135,7 @@ def list_to_string(list_of_characters):
 
 
 list_to_string(strT0list)
-
+# write the links obtained to the txt file
 def write_to_notepad(list_of_strings):
     with open("sflix_movie_links.txt", "w") as f:
         for string in list_of_strings:
@@ -142,6 +144,7 @@ def write_to_notepad(list_of_strings):
 write_to_notepad(strT0list)
 
 
+# TO MAKE SURE THERE ARE NO DUPLICATES IN THE txt file
 def remove_duplicate_strings(file_name):
     seen = set()
     new_list = []
