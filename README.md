@@ -1,12 +1,14 @@
 # BeautifulSoup
  Web scraping for movies
 
- ensure all  required libraries are installed usin pip
+ Ensure all  required libraries are installed using pip
  
-chose the website
-ask for permission for scrapping a website
+Choose the website
 
-each step has been commened out
-any improvements or more than welcome
+Ask for permission for scrapping a website
 
-all the links are then stored in a text file
+Each step has been commened out
+
+Any improvements or more than welcome
+
+All the links are then stored in a text file
