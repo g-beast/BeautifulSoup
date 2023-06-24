@@ -6,7 +6,7 @@ import os
 import re
 
 #  Set the URL of the website you want to scrape.
-url = "theHomePage UTL"
+url = "theHomePageUrl"
 
 # Get the HTML of the website.
 response = requests.get(url)
